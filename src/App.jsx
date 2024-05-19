@@ -1,40 +1,48 @@
 import { useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import {
+  HomePage,
+  AboutMe
+} from './pages';
 
-  let navigate = useNavigate();
-  const routeChange = (newPath) => {
-    navigate(path)
+function App() {
+  const navigate = useNavigate();
+  const routeChange = (path) => {
+    return () => navigate(path);
   }
+
+  const knownPaths = [
+    '/aboutMe',
+    '/hobbies',
+    '/music'
+  ];
 
   return (
     <>
       <div className="navBar">
-        <button onClick = {() => routeChange('/')} className = "navButton">
+        <button onClick={routeChange('/')} className = "navButton">
           Home
         </button>
-        <button className = "navButton">
+        <button onClick={routeChange('/aboutMe')} className = "navButton">
           About Me
         </button>
-        <button className = "navButton">
+        <button onClick={routeChange('/hobbies')} className = "navButton">
           Hobbies
         </button>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={routeChange('/music')} className = "navButton">
+          My Music
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div>
+        <Routes>
+          <Route path = '/' element = {<HomePage />}/>
+          <Route path = '/aboutMe' element = {<AboutMe />}></Route>
+          {/* <Route path="/hobbies" element={<Hobbies />} /> 
+          <Route path="/music" element={<Music />} />  */}
+        </Routes>
+      </div>
     </>
   )
 }
