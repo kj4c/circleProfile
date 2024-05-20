@@ -5,7 +5,8 @@ import {
   HomePage,
   AboutMe,
   Hobbies,
-  Music
+  Music,
+  NavBar
 } from './pages';
 
 function App() {
@@ -14,28 +15,10 @@ function App() {
     return () => navigate(path);
   }
 
-  const knownPaths = [
-    '/aboutMe',
-    '/hobbies',
-    '/music'
-  ];
-
   return (
     <>
-      <div className="navBar">
-        <button onClick={routeChange('/')} className = "text-green-500">
-          Home
-        </button>
-        <p className='text-red-500'>HELLO</p>
-        <button onClick={routeChange('/aboutMe')} className = "navButton">
-          About Me
-        </button>
-        <button onClick={routeChange('/hobbies')} className = "navButton">
-          Hobbies
-        </button>
-        <button onClick={routeChange('/music')} className = "navButton">
-          My Music
-        </button>
+      <div className="flex justify-between bg-primary text-white w-screen mb-10 h-20 items-center">
+        <NavBar/>
       </div>
       <div>
         <Routes>
