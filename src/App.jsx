@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Routes, Route, useNavigate } from "react-router-dom";
-import './App.css'
 
 import {
   HomePage,
@@ -24,9 +23,10 @@ function App() {
   return (
     <>
       <div className="navBar">
-        <button onClick={routeChange('/')} className = "navButton">
+        <button onClick={routeChange('/')} className = "text-green-500">
           Home
         </button>
+        <p className='text-red-500'>HELLO</p>
         <button onClick={routeChange('/aboutMe')} className = "navButton">
           About Me
         </button>
