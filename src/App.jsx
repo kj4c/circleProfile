@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 import {
   HomePage,
@@ -10,11 +10,6 @@ import {
 } from './pages';
 
 function App() {
-  const navigate = useNavigate();
-  const routeChange = (path) => {
-    return () => navigate(path);
-  }
-
   return (
     <>
       <div className="flex justify-between bg-primary text-white w-screen mb-10 h-20 items-center">

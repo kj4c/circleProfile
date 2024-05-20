@@ -6,4 +6,7 @@
     .navbar-button {
         @apply transition ease-in-out w-1/2 self-center bg-primary text-sectext hover:text-white;
     }
+    .navbar-button-selected {
+        @apply transition ease-in-out w-1/2 self-center text-white;
+    }
 }
