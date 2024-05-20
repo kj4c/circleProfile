@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Routes, Route} from "react-router-dom";
 
 import {
@@ -24,7 +23,7 @@ function App() {
         </Routes>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
