@@ -4,7 +4,9 @@ import './App.css'
 
 import {
   HomePage,
-  AboutMe
+  AboutMe,
+  Hobbies,
+  Music
 } from './pages';
 
 function App() {
