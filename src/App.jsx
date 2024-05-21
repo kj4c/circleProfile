@@ -1,4 +1,5 @@
 import { Routes, Route} from "react-router-dom";
+import { IoPerson } from "react-icons/io5";
 
 import {
   HomePage,
@@ -11,9 +12,10 @@ import {
 function App() {
   return (
     <>
-      <div className="flex justify-between bg-primary text-white w-screen mb-10 h-20 items-center">
+      <div className="flex justify-between bg-primary text-white w-screen h-20 items-center">
         <NavBar/>
       </div>
+     
       <div>
         <Routes>
           <Route path = '/circleProfile' element = {<HomePage />}/>
