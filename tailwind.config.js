@@ -24,9 +24,26 @@ export default {
         '6': '6px',
         '8': '8px',
       },
+      width: {
+        waveWidth: '1000px'
+      },
+      height: {
+        waveHeight: '400px'
+      },
+      backgroundSize: {
+        'waveSize': '100%',
+      },
+      spacing: {
+        'waveBottom': '-500px',
+        'waveTop': '-190px',
+      },
+      fontSize: {
+        'titleText': '70px'
+      },
       animation: {
         fadeIn: 'fadeIn 1.1s ease-out',
-        slide: 'slide 1.1s ease-out'
+        slide: 'slide 1.1s ease-out',
+        waveMotion: 'waveMotion 10s linear infinite'
       },
       keyframes: {
         fadeIn: {
@@ -49,7 +66,11 @@ export default {
           '72.5%': {
             top: '-12.25rem'
           }
-        }
+        },
+        waveMotion: {
+          '0%': { transform: 'translateX(0)'},
+          '50%': { transform: 'translateX(-52%)'},
+        },
       }
     }
   },

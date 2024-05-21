@@ -1,5 +1,4 @@
 import { Routes, Route} from "react-router-dom";
-import { IoPerson } from "react-icons/io5";
 
 import {
   HomePage,

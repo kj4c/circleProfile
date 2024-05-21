@@ -15,7 +15,7 @@ const NavBar = () => {
     return (
         <>
             <div className="w-3/5">
-                <button onClick={routeChange('/circleProfile')} className={`flex items-center navbar-button w-30 font-bold text-xl pl-30 ${isActive('/circleProfile') ? 'navbar-button-selected' : ''}`}>
+                <button onClick={routeChange('/circleProfile/')} className={`flex items-center navbar-button w-30 font-bold text-xl pl-30 ${isActive('/circleProfile/') ? 'navbar-button-selected' : ''}`}>
                     <p className="text-5xl"><WiAlien/></p> 
                     <span>Khye Jac</span>
                 </button>

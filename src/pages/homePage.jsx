@@ -1,48 +1,21 @@
-import picture from '../assets/profilepic.jpg';
-import { useState } from 'react';
-import { FaAngleDown, FaAngleRight } from "react-icons/fa6";
-import { CSSTransition } from 'react-transition-group';
-import '../styles/Homepage.css'
+import wave from '../assets/wave.svg';
+import picture from '../assets/astro.png';
 
 const HomePage = () => {
-    const [isIntroOpen, setIsIntroOpen] = useState(false);
-
-    const toggleIntro = () => {
-        setIsIntroOpen(!isIntroOpen);
-    }
-
     return (
-        <div>
-            <div className='flex flex-col mx-50 items-center justify-center w-screen bg-secondary'>
-                <div className='p-8 animate-fadeIn'>
-                    <img className='border-solid border-8 border-primary rounded-full h-72 ' src = {picture}></img>
-                    <p className='pt-5 text-5xl font-medium'>Khye Jac Low</p>
+        <section className="relative w-screen bg-primary overflow-hidden" style={{ height: 'calc(100vh - 7rem)'}}>
+            <div className='flex justify-center items-center'>
+                <p className='flex justify-center items-center text-white text-titleText font-bold ml-50'>Welcome to <br></br>my profile.</p>
+                <div className='pl-6'>
+                    <img className='bg-primary h-72 ' src = {picture}></img>
                 </div>
             </div>
-            <div className='flex mx-5'>
-                <button  onClick={toggleIntro}>{isIntroOpen ? <FaAngleDown/> : <FaAngleRight/> }</button>
-                <h1 className='w-screen  border-b-1 py-3 pl-3 text-3xl font-medium'>Introduction</h1>
+            <div className='flex justify-center items-center'>
+                <button className='text-primary border-solid border-8 bg-white border-white rounded-full'>START →</button>
             </div>
-            <CSSTransition in={isIntroOpen} timeout={200} classNames="my-node" unmountOnExit>
-                <p className='mx-9 pt-5'>Hi! My name's Khye Jac but most people call me <span className='font-bold'>KJ</span>! My profile was built based upon the design of the Circles 
-                App built by DevSoc</p>
-            </CSSTransition>
-            <h1 className='py-3 pl-5 text-3xl font-medium'>Age</h1>
-            <p>18</p>
-            <h1 className='py-3 pl-5 text-3xl font-medium'>Degree and Year</h1>
-            <p>Second Year Software Engineering</p>
-            <h1 className='py-3 pl-5 text-3xl font-medium'>Comp Courses</h1>
-            <ul>
-                <li>COMP1511</li>
-                <li>COMP1521</li>
-                <li>COMP1531</li>
-                <li>COMP2521</li>
-                <li>COMP3311</li>
-                <li>COMP3121</li>
-                <li>SENG2011</li>
-                <li>SENG2021</li>
-            </ul>
-        </div>
+            <svg width="220%"  id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" className=" top-waveTop left-waveLeft absolute animate-waveMotion"><path d="M 0,600 L 0,225 C 88.35714285714286,270.2142857142857 176.71428571428572,315.42857142857144 307,334 C 437.2857142857143,352.57142857142856 609.5,344.5 756,311 C 902.5,277.5 1023.2857142857142,218.57142857142856 1133,200 C 1242.7142857142858,181.42857142857144 1341.357142857143,203.21428571428572 1440,225 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#ffffff" fillOpacity="1"></path></svg>
+            <div className="wave2"></div>
+        </section>
     )
 }
 
