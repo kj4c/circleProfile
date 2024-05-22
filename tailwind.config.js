@@ -12,6 +12,7 @@ export default {
       colors: {
         primary: '#9254de',
         secondary: '#efdbff',
+        homepage: '#9654e5',
         deftext: '#cfbef0',
         sectext: '#BC9AF7'
       },
@@ -36,6 +37,8 @@ export default {
       spacing: {
         'waveBottom': '-500px',
         'waveTop': '-190px',
+        'waveLeft': '219.8%',
+        'waveTop2': '-191px',
       },
       fontSize: {
         'titleText': '70px'
@@ -43,7 +46,9 @@ export default {
       animation: {
         fadeIn: 'fadeIn 1.1s ease-out',
         slide: 'slide 1.1s ease-out',
-        waveMotion: 'waveMotion 10s linear infinite'
+        waveMotion: 'waveMotion 10s linear infinite',
+        bouncing: 'bouncing 3s ease-in-out infinite',
+        moveTop: 'moveTop 1s ease-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -69,8 +74,27 @@ export default {
         },
         waveMotion: {
           '0%': { transform: 'translateX(0)'},
-          '50%': { transform: 'translateX(-52%)'},
+          '100%': { transform: 'translateX(-100%)'},
         },
+        bouncing: {
+          '0%': {
+            transform: 'translateY(0px)'
+          },
+          '50%': {
+            transform: 'translateY(-20px)',
+          },
+          '100%' : {
+            transform: 'translateY(0px)'
+          }
+        },
+        moveTop: {
+          '0%' : {
+            transform: 'translateY(-35px)'
+          },
+          '100%': {
+            transform: 'translateY(-35px)'
+          }
+        }
       }
     }
   },
