@@ -1,4 +1,4 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route, useLocation} from "react-router-dom";
 
 import {
   HomePage,
@@ -9,12 +9,20 @@ import {
 } from './pages';
 
 function App() {
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  }
+
   return (
-    <>
-      <div className="flex justify-between bg-primary text-white w-screen h-20 items-center">
-        <NavBar/>
-      </div>
-     
+    <> 
+      {location.pathname !== '/circleProfile/' &&
+        <div className="flex justify-between bg-primary text-white w-screen h-20 items-center">
+          <NavBar/>
+        </div>
+      }
+
       <div>
         <Routes>
           <Route path = '/circleProfile' element = {<HomePage />}/>

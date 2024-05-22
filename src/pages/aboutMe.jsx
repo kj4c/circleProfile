@@ -8,7 +8,9 @@ const data = [
     {
         id: 1,
         title: 'Introduction',
-        content: 'Hi! My name\'s Khye Jac but most people call me KJ! My profile was built based upon the design of the Circles \n App built by DevSoc.'
+        content: `Hi! My name\'s Khye Jac but most people call me KJ! My profile was built based upon the design of the Circles \n App built by DevSoc. 
+        I wanted to build this website with something that I am not familiar with which is TailwindCSS and SVGs,
+        it took a long while to comprehend but I learnt a lot of new useful content!`
     },
     {
         id: 2,

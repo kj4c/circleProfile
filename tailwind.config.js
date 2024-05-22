@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+import wave from './assets/wave.svg';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,10 +10,16 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'lg': '1904px', // Large screens
+        'xl': '1439px', // Extra large screens
+        'xxl': '1980px',
+        'xxxl': '25560'
+      },
       colors: {
         primary: '#9254de',
         secondary: '#efdbff',
-        homepage: '#9654e5',
+        homepage: '#9e51ff',
         deftext: '#cfbef0',
         sectext: '#BC9AF7'
       },
@@ -34,6 +41,9 @@ export default {
       backgroundSize: {
         'waveSize': '100%',
       },
+      backgroundImage: {
+        'wave': "url('${wave}')"
+      },
       spacing: {
         'waveBottom': '-500px',
         'waveTop': '-190px',
@@ -46,9 +56,13 @@ export default {
       animation: {
         fadeIn: 'fadeIn 1.1s ease-out',
         slide: 'slide 1.1s ease-out',
-        waveMotion: 'waveMotion 10s linear infinite',
+        slideRight: 'slideRight 2s ease-in-out',
+        waveMotion: 'waveMotion 13s cubic-bezier(0.36, 0.45, 0.63, 0.53)  -0.125s infinite',
+        waveBounce: 'waveBounce 5s ease -1.25 infinite',
         bouncing: 'bouncing 3s ease-in-out infinite',
         moveTop: 'moveTop 1s ease-out infinite',
+        popOut: 'popOut 1s ease-in-out',
+        boom: 'boom 0.2s ease-in-out'
       },
       keyframes: {
         fadeIn: {
@@ -72,9 +86,31 @@ export default {
             top: '-12.25rem'
           }
         },
+        slideRight: {
+          '0%': {
+            transform: 'translateX(-60px)'
+          },
+          '50%': {
+            transform: 'translateX(10px)'
+          },
+          '100%': {
+            transform: 'translateX(0px)'
+          }
+        },
         waveMotion: {
-          '0%': { transform: 'translateX(0)'},
-          '100%': { transform: 'translateX(-100%)'},
+          '0%': { marginLeft: '0'},
+          '100%': { marginLeft: '-1725px'},
+        },
+        waveBounce: {
+          '0%': {
+            transform: 'translate3d(0,-30px,0)',
+          },
+          '50%': {
+            transform: "translate3d(0,5px,0)"
+          },
+          '100%': {
+            transform: 'translate3d(0,-30px,0)'
+          }
         },
         bouncing: {
           '0%': {
@@ -93,6 +129,31 @@ export default {
           },
           '100%': {
             transform: 'translateY(-35px)'
+          }
+        },
+        popOut: {
+          '0%': {
+            transform: 'scale(1.8)'
+          },
+          '20%': {
+            transform: 'scale(1.1)'
+          },
+          '40%': {
+            transform: 'scale(1.7)'
+          },
+          '60%': {
+            transform: 'scale(1.3)'
+          },
+          '80%': {
+            transform: 'scale(1.5)'
+          },
+          '100%': {
+            transform: 'scale(1)'
+          }
+        },
+        boom: {
+          '100%': {
+            transform: 'scale(1.1)'
           }
         }
       }

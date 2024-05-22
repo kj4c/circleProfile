@@ -10,3 +10,33 @@
         @apply transition ease-in-out w-1/2 self-center text-white;
     }
 }
+
+@screen sm {
+    .wave-background {
+      top: -42vh;
+    }
+  
+    .wave-foreground {
+      top: -38vh;
+    }
+  }
+  
+  @screen md {
+    .wave-background {
+      top: -25vh;
+    }
+  
+    .wave-foreground {
+      top: -22vh;
+    }
+  }
+  
+  @screen lg {
+    .wave-background {
+      top: -12px;
+    }
+  
+    .wave-foreground {
+      top: -10px;
+    }
+  }
