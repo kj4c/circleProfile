@@ -1,17 +1,25 @@
 import profile from '../assets/profile-text.svg';
 import picture from '../assets/astronaut.png';
-import wave from '../assets/wave.svg';
 import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
     const navigate = useNavigate();
     const routeChange = (path) => {
         return () => navigate(path);
-      }
+    }
+
+    const wave = `
+    <svg width="100%" height="100%" viewBox="0 0 1600 916" fill="none" preserveAspectRatio="xMinYMax meet" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.41046e-05 633.249C310.995 633.249 409.898 917.153 811 915.997C1211 915.997 1311 633.249 1600 633.249L1600 7.88413e-05L8.00793e-05 -6.10352e-05C8.00793e-05 -6.10352e-05 7.58333e-05 499.088 6.41046e-05 633.249Z" fill="#7D17FF" fill-opacity="0.75"/>
+    </svg>
+    `
+
+    const svgDataUrl = `data:image/svg+xml,${encodeURIComponent(wave)}`;
+
     return (
         <section className="relative w-screen bg-white overflow-hidden h-screen">
             <div className='w-full h-[1000px] absolute overflow-x-hidden'>
-                <div className=' w-[6400px] h-[1000px] absolute lg:top-[-38vh] xl:top-[-22vh]  bg-repeat-x animate-waveMotion animate-waveBounce' style={{backgroundImage: `url(${wave})`}}>
+                <div className=' w-[6400px] h-[1000px] absolute lg:top-[-38vh] xl:top-[-22vh]  bg-repeat-x animate-waveMotion animate-waveBounce' style={{backgroundImage: `url(${svgDataUrl})`}}>
                 </div>
             </div>
             <div className='mt-[100px] flex justify-center items-center'>
@@ -26,8 +34,6 @@ const HomePage = () => {
                 </div>
             </div>
 
-            {/* <svg width="220%"  id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" className=" top-waveTop absolute animate-waveMotion"><path d="M 0,600 L 0,225 C 88.35714285714286,270.2142857142857 176.71428571428572,315.42857142857144 307,334 C 437.2857142857143,352.57142857142856 609.5,344.5 756,311 C 902.5,277.5 1023.2857142857142,218.57142857142856 1133,200 C 1242.7142857142858,181.42857142857144 1341.357142857143,203.21428571428572 1440,225 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#ffffff" fillOpacity="1"></path></svg>
-            <svg width="220%"  id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" className=" top-waveTop2 left-waveLeft absolute animate-waveMotion"><path d="M 0,600 L 0,225 C 88.35714285714286,270.2142857142857 176.71428571428572,315.42857142857144 307,334 C 437.2857142857143,352.57142857142856 609.5,344.5 756,311 C 902.5,277.5 1023.2857142857142,218.57142857142856 1133,200 C 1242.7142857142858,181.42857142857144 1341.357142857143,203.21428571428572 1440,225 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#ffffff" fillOpacity="1"></path></svg> */}
         </section>
     )
 }
