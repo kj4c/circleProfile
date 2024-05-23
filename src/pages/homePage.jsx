@@ -13,13 +13,22 @@ const HomePage = () => {
     <path fill-rule="evenodd" clip-rule="evenodd" d="M6.41046e-05 633.249C310.995 633.249 409.898 917.153 811 915.997C1211 915.997 1311 633.249 1600 633.249L1600 7.88413e-05L8.00793e-05 -6.10352e-05C8.00793e-05 -6.10352e-05 7.58333e-05 499.088 6.41046e-05 633.249Z" fill="#7D17FF" fill-opacity="0.75"/>
     </svg>
     `
+    const wave2 = `
+    <svg width="100%" height="100%" viewBox="0 0 1600 916" fill="none" preserveAspectRatio="xMinYMax meet" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.41046e-05 633.249C310.995 633.249 409.898 917.153 811 915.997C1211 915.997 1311 633.249 1600 633.249L1600 7.88413e-05L8.00793e-05 -6.10352e-05C8.00793e-05 -6.10352e-05 7.58333e-05 499.088 6.41046e-05 633.249Z" fill="#9154DE" fill-opacity="0.75"/>
+    </svg>
+
+    `
 
     const svgDataUrl = `data:image/svg+xml,${encodeURIComponent(wave)}`;
+    const svgDataUrl2 = `data:image/svg+xml,${encodeURIComponent(wave2)}`;
 
     return (
         <section className="relative w-screen bg-white overflow-hidden h-screen">
             <div className='w-full h-[1000px] absolute overflow-x-hidden'>
-                <div className=' w-[6400px] h-[1000px] absolute lg:top-[-38vh] xl:top-[-22vh]  bg-repeat-x animate-waveMotion animate-waveBounce' style={{backgroundImage: `url(${svgDataUrl})`}}>
+                <div className=' w-[6400px] h-[1000px] absolute lg:top-[-38vh] xl:top-[-22vh]  bg-repeat-x animate-waveMotionBounce' style={{backgroundImage: `url(${svgDataUrl})`}}>
+                </div>
+                <div className=' w-[6400px] h-[1000px] absolute lg:top-[-37vh] xl:top-[-21vh]  bg-repeat-x animate-waveMotion' style={{backgroundImage: `url(${svgDataUrl2})`}}>
                 </div>
             </div>
             <div className='mt-[100px] flex justify-center items-center'>

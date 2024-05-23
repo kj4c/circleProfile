@@ -19,7 +19,7 @@ export default {
       colors: {
         primary: '#9254de',
         secondary: '#efdbff',
-        homepage: '#9e51ff',
+        homepage: '#9654e6',
         deftext: '#cfbef0',
         sectext: '#BC9AF7'
       },
@@ -58,7 +58,7 @@ export default {
         slide: 'slide 1.1s ease-out',
         slideRight: 'slideRight 2s ease-in-out',
         waveMotion: 'waveMotion 13s cubic-bezier(0.36, 0.45, 0.63, 0.53)  -0.125s infinite',
-        waveBounce: 'waveBounce 5s ease -1.25 infinite',
+        waveMotionBounce: 'waveMotionBounce 13s cubic-bezier(0.36, 0.45, 0.63, 0.53)  -0.125s infinite',
         bouncing: 'bouncing 3s ease-in-out infinite',
         moveTop: 'moveTop 1s ease-out infinite',
         popOut: 'popOut 1s ease-in-out',
@@ -97,20 +97,26 @@ export default {
             transform: 'translateX(0px)'
           }
         },
-        waveMotion: {
-          '0%': { marginLeft: '0'},
-          '100%': { marginLeft: '-1725px'},
-        },
-        waveBounce: {
-          '0%': {
-            transform: 'translate3d(0,-30px,0)',
+        waveMotionBounce: {
+          '0%': { 
+            marginLeft: '0',
+            transform: 'translateY(-50px)'
           },
           '50%': {
-            transform: "translate3d(0,5px,0)"
+            transform: 'translateY(0)'
           },
-          '100%': {
-            transform: 'translate3d(0,-30px,0)'
-          }
+          '100%': { 
+            marginLeft: '-1725px',
+            transform: 'translateY(-50px)'
+          },
+        },
+        waveMotion: {
+          '0%': { 
+            marginLeft: '0',
+          },
+          '100%': { 
+            marginLeft: '-1725px',
+          },
         },
         bouncing: {
           '0%': {

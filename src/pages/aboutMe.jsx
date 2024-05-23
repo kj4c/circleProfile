@@ -48,7 +48,7 @@ const AboutMe = () => {
             </div>
             {data.map((ele) => (
                 <div key = {ele.id} className='my-5'>
-                    <div className='flex mx-5'>
+                    <div className='animate-slideRight flex mx-5'>
                         <button  onClick={() => toggleIntro(ele.id)}>{isIntroOpen[ele.id] ? <FaAngleDown/> : <FaAngleRight/> }</button>
                         <h1 className='w-screen  border-b-1 py-3 pl-3 text-3xl font-medium'>{ele.title}</h1>
                     </div>
