@@ -11,7 +11,7 @@ const HomePage = () => {
     return (
         <section className="relative w-screen bg-white overflow-hidden h-screen">
             <div className='w-full h-[1000px] absolute overflow-x-hidden'>
-                <div className=' w-[6400px] h-[1000px] absolute lg:top-[-38vh] xl:top-[-22vh]  bg-repeat-x animate-waveMotion animate-waveBounce' style={{backgroundImage: `url(/circleProfile/src/assets/wave.svg)`}}>
+                <div className=' w-[6400px] h-[1000px] absolute lg:top-[-38vh] xl:top-[-22vh]  bg-repeat-x animate-waveMotion animate-waveBounce' style={{backgroundImage: `url(${wave})`}}>
                 </div>
             </div>
             <div className='mt-[100px] flex justify-center items-center'>
