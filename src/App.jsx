@@ -25,10 +25,10 @@ function App() {
 
       <div>
         <Routes>
-          <Route path = '/circleProfile' element = {<HomePage />}/>
+          <Route path = '/circleProfile/' element = {<HomePage />}/>
           <Route path = '/circleProfile/aboutMe' element = {<AboutMe />}></Route>
-          <Route path="/circleProfile/hobbies" element={<Hobbies />} /> 
-          <Route path="/circleProfile/music" element={<Music />} /> 
+          <Route path='/circleProfile/hobbies' element={<Hobbies />} /> 
+          <Route path='/circleProfile/music' element={<Music />} /> 
         </Routes>
       </div>
     </>

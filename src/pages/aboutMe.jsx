@@ -9,7 +9,7 @@ const data = [
         id: 1,
         title: 'Introduction',
         content: `Hi! My name\'s Khye Jac but most people call me KJ! My profile was built based upon the design of the Circles \n App built by DevSoc. 
-        I wanted to build this website with something that I am not familiar with which is TailwindCSS and SVGs,
+        I wanted to build this website with technologies that I am not familiar with which are TailwindCSS and SVGs,
         it took a long while to comprehend but I learnt a lot of new useful content!`
     },
     {
@@ -26,6 +26,16 @@ const data = [
         id: 4,
         title: 'Courses I\'ve taken ',
         content: 'COMP1511\nCOMP1521\nCOMP1531\nCOMP2521\nCOMP3311\nCOMP3121\nSENG2011\nSENG2021'
+    },
+    {
+        id: 5,
+        title: 'My experience',
+        content: `I have had experience building full stack programs through my SENG2021 course, alongside a team 
+        of 5, we were tasked with building an invoicing company which you can view <a href="https://invoice-seng2021-24t1-eggs-frontend.vercel.app/"><b><u>here</u></b></a>, 
+        (log in with the user: "khyejac" and password: "password"). I learnt a lot from this course
+        but the reason why I want to join the DevSoc program is because most of the content
+        I learnt is self taught, I am afraid that I may have missed out on some crucial introductory
+        content. I would also love to work in a team environment again and work together to create an amazing website! `
     }
 ]
 const AboutMe = () => {
@@ -53,7 +63,7 @@ const AboutMe = () => {
                         <h1 className='w-screen  border-b-1 py-3 pl-3 text-3xl font-medium'>{ele.title}</h1>
                     </div>
                     <CSSTransition in={isIntroOpen[ele.id]} timeout={200} classNames="my-node" unmountOnExit>
-                        <p className='mx-9 pt-5'>{ele.content}</p>
+                        <p dangerouslySetInnerHTML={{ __html: ele.content }} className='mx-9 pt-5'/>
                     </CSSTransition>
                 </div>
             ))}

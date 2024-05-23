@@ -27,9 +27,9 @@ const NavBar = () => {
                 <button onClick={routeChange('/circleProfile/hobbies')} className = {isActive('/circleProfile/hobbies') ? "navbar-button-selected" : "navbar-button"}>
                     Hobbies
                 </button>
-                <button onClick={routeChange('/circleProfile/music')} className = {isActive('/circleProfile/music') ? "navbar-button-selected" : "navbar-button"}>
+                {/* <button onClick={routeChange('/circleProfile/music')} className = {isActive('/circleProfile/music') ? "navbar-button-selected" : "navbar-button"}>
                     Music
-                </button>
+                </button> */}
             </div>
         </>
     )
