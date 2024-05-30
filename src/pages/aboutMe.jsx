@@ -36,6 +36,11 @@ const data = [
         but the reason why I want to join the DevSoc program is because most of the content
         I learnt is self taught, I am afraid that I may have missed out on some crucial introductory
         content. I would also love to work in a team environment again and work together to create an amazing website! `
+    },
+    {
+        id: 6,
+        title: 'LinkedIn',
+        content: `Please add me <a href="https://www.linkedin.com/in/khye-jac-low-134946218/"><b><u>here</u></b></a>`
     }
 ]
 const AboutMe = () => {
